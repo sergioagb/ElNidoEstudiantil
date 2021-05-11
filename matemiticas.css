@@ -14,5 +14,15 @@
  color: #ac055b;
  font-size: 40px;
     }
-      
-    
+  .quis{
+    font-size: 20px;
+    font-weight: normal;
+  background-color: #048a9c98;
+  padding: 2px;
+/*
+    width: 2em;
+    height: 2em;*/
+  }
+  .resul{
+    font-size: 30px; 
+  }
