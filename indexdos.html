@@ -2,17 +2,37 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Juguemos AL Ohorcado Con Preguntas</title>
+        
+        <h3>Juguemos AL Ohorcado Con Preguntas</h3>
+		<li class="first-item">
+            <div  class="boton_1">
+            <a href="index.html" >
+             <span class="text-item"><button>Regresar</button></span> 
+            <span class="down-item"></span>
+
+        </a>
+     </li>
         <style>
+            .boton_1 button{
+	       background: #084ee4;
+	       color: white;
+	       border-radius: 20px;
+	       font-size: 30px;
+	       width: 160px;
+	       height: 80px;
+                     }
+             h3{
+            background: #f0e8ed;
+	        text-align: center;
+	        color: #ac055b;
+	        font-size: 40px;
+              }
             body{
                 width: 960px;
                 margin: 0 auto;
                 background: url(imagenes/fondo.jpg);
             }
-            h1{
-                text-align: center;
-                background: url(img/pizarron.jpg);
-            }
+            
             #pantalla{
                 border: groove 8px gold;
                
@@ -34,8 +54,8 @@
             }
         </style>
         </head>
+        
     <body>
-        <h1>-El juego del ahorcado-</h1>
         <canvas id="pantalla" width="960px" height="450px"> <!-- etiqueta del canvas con sus medidas en la pantalla -->
             Tu navegador no soporta Canvas.
         </canvas>
@@ -138,7 +158,7 @@
                 let pista = ""; // Se crea la variable local pista que contendra nuestra frase de pista
                 switch(palabra){  // Se crea un switch para poder controlar las pistas segun la palabra 
                     case 'MESA':   // Se debera hacer un case por cada palabra 
-                        pista = "Es un mueble  que es sostenida por una o más patas.";
+                        pista = "Es un mueble  que es sostenido por una o más patas.";
                         break;     // Es importante el break en cada case 
                     case 'ESCOBA':
                         pista = "Se utiliza para limpiar suciedad del suelo.";
@@ -160,16 +180,16 @@
                         pista = "Es fiesta, nacimiento del Niño Jesús y dan regalos.";
                         break;
                     case 'PINO':
-                        pista = "árbol de forma similar a una pirámide. ";
+                        pista = "Árbol de forma similar a una pirámide. ";
                         break;
                     case 'FLOR':
-                        pista = "Su belleza o fraganciaque crece en el cesped.";
+                        pista = "Su belleza o fragancia crece en el cesped.";
                         break;
                     case 'PATINES':
-                        pista = "Dirve para ir sobre el hielo, sobre un pavimento liso.";
+                        pista = "Sirve para ir sobre el hielo, sobre un pavimento liso.";
                         break;
                     case 'BICICLETA':
-                        pista = "Tiene dos ruedas, con pedales que transmite el movimiento.";
+                        pista = "Tiene dos ruedas, con pedales que provoca el movimiento.";
                         break;
                      case 'COCINA':
                         pista = "El sitio en el cual se prepara la comida.";
@@ -178,10 +198,11 @@
                         pista = "Habitación dedicada a recibir visitas, ver la televisión. ";
                         break;
                       case 'BANDERA':
-                        pista = "Es una pieza de tela que se sujeta por uno de sus lados a un asta.";
+                        pista = "Tela que se sujeta por uno de sus lados a un hasta.";
+                       
                         break;
                      case 'PLAYA':
-                        pista = "Suelen estar hechas de roca, como arena, mar.";
+                        pista = "Lugar formado con roca, arena, mar.";
                         break;
                     default:  // El defaul se puede omitir // 
                         pista="No hay pista aun xP";
