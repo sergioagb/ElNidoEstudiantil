@@ -1,3 +1,25 @@
+body{
+	font-family: 'Century Gothic';
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	background: url(imagenes/selva.png);
+	background-size: cover;
+	background-attachment: fixed;
+}
+.boton_1 button{
+	background: #08e476;
+	color: white;
+	border-radius: 20px;
+	font-size: 30px;
+	width: 160px;
+	height: 80px;
+}
+.boton_2 button{
+	background: #0f717e;
+	color: white;
+	border-radius: 20px;
+	font-size: 30px;
+	width: 160px;
 	height: 80px;
 	
 }
