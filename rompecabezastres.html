@@ -6,7 +6,7 @@
 	<!-- Estilo CSS para que la separación entre las celdas de las tablas sea el mínimo posible -->
 	<link rel="stylesheet"
         href="https://use.fontawesome.com/release/v5.6.3/css/all.css">
-        <link rel="stylesheet" href="rompecabeza.css"> 
+        <link rel="stylesheet" href="rompecabezastres.css"> 
 	<style type="text/css">
 		table {
 		  border-collapse: collapse;
@@ -19,39 +19,31 @@
 </head>
 <body>
 	<center>
-		<h3>Romecabesas sobre el Interios del ser humano</h3>
+		<h3>Romecabezas sobre los Pulmones </h3>
 		<li class="first-item">
             <div  class="boton_1">
             <a href="index.html" >
-             <span class="text-item"><button>Regresar </button></span> 
+             <span class="text-item"><button>Regresar</button></span> 
             <span class="down-item"></span>
 
         </a>
      </li>
-	 <li class="first-item">
-		
-		<div align = "right"  class="boton_2">
-		<a href="rompecabezas.html" >
-		 <span class="text-item"><button>Siguiente =></button></span> 
-		<span class="down-item"></span>
 
-	</a>
- </li>
 		<table>
 			<tr>
-				<td><img id="imge_0" src="imagenes/imge_0.jpg" onclick="seleccionar(0)" /></td>
-				<td><img id="imge_1" src="imagenes/imge_1.jpg" onclick="seleccionar(1)" /></td>
-				<td><img id="imge_2" src="imagenes/imge_2.jpg" onclick="seleccionar(2)" /></td>
+				<td><img id="img_0" src="imagenes/img_0.jpg" onclick="seleccionar(0)" /></td>
+				<td><img id="img_1" src="imagenes/img_1.jpg" onclick="seleccionar(1)" /></td>
+				<td><img id="img_2" src="imagenes/img_2.jpg" onclick="seleccionar(2)" /></td>
 			</tr>
 			<tr>
-				<td><img id="imge_3" src="imagenes/imge_3.jpg" onclick="seleccionar(3)" /></td>
-				<td><img id="imge_4" src="imagenes/imge_4.jpg" onclick="seleccionar(4)" /></td>
-				<td><img id="imge_5" src="imagenes/imge_5.jpg" onclick="seleccionar(5)" /></td>
+				<td><img id="img_3" src="imagenes/img_3.jpg" onclick="seleccionar(3)" /></td>
+				<td><img id="img_4" src="imagenes/img_4.jpg" onclick="seleccionar(4)" /></td>
+				<td><img id="img_5" src="imagenes/img_5.jpg" onclick="seleccionar(5)" /></td>
 			</tr>
 			<tr>
-				<td><img id="imge_6" src="imagenes/imge_6.jpg" onclick="seleccionar(6)" /></td>
-				<td><img id="imge_7" src="imagenes/imge_7.jpg" onclick="seleccionar(7)" /></td>
-				<td><img id="imge_8" src="imagenes/imge_8.jpg" onclick="seleccionar(8)" /></td>
+				<td><img id="img_6" src="imagenes/img_6.jpg" onclick="seleccionar(6)" /></td>
+				<td><img id="img_7" src="imagenes/img_7.jpg" onclick="seleccionar(7)" /></td>
+				<td><img id="img_8" src="imagenes/img_8.jpg" onclick="seleccionar(8)" /></td>
 			</tr>
 		</table>
 
@@ -65,7 +57,7 @@ function desordenar() {
 function desmarcarTodas() {
 	//Elimina el borde de todas las casillas (aunque no lo tuviesen)
 	for (var i=0;i<=8;i++) {
-		document.getElementById("imge_"+i).style.border = "solid 2px white";
+		document.getElementById("img_"+i).style.border = "solid 2px white";
 	}
 }
 //Esta función se le llama cuando se hace click en una casilla:
@@ -79,7 +71,7 @@ function seleccionar(casilla) {
 		//Memorizar la casilla donde se ha hecho este primer click:
 		casilla_click_primero = casilla;
 		desmarcarTodas();
-		document.getElementById("imge_"+casilla).style.border = "solid 2px red";
+		document.getElementById("img_"+casilla).style.border = "solid 2px red";
 		console.log("Memorizo la casilla del primer click: "+casilla_click_primero);
 	}
 
@@ -138,7 +130,7 @@ function refrescarPuzzle() {
 		//Obtengo el número de la imagen que hay en el array en la casilla i:
 		var imagen = piezas[casilla];
 		//Pinto en la casilla i, la imagen imagen:
-		document.getElementById("imge_"+casilla).src = "imagenes/imge_"+imagen+".jpg";
+		document.getElementById("img_"+casilla).src = "imagenes/img_"+imagen+".jpg";
 	}
 }
 
