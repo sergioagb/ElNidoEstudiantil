@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Cuestionario</title>
+</head>
+<body>
+   
+    <style> 
+  
+        #frame001 {
+            background-color: rgb(0, 243, 231);
+            border: 4px solid black;
+            width: 600px;
+            height: 400px;
+            border-radius: 10px;
+            padding: 90px;
+            margin: 90px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .buttons001 {
+            background: #356172;
+	color: white;
+	border-radius: 20px;
+	font-size: 30px;
+	width: 170px;
+	height: 80px;
+          
+            
+        }
+
+        .buttons002 {
+            background-color: rgb(12, 213, 240);
+            color: black;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 10px;
+            width: 90px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .boton_1 button{
+	background: #9308e4;
+	color: white;
+	border-radius: 20px;
+	font-size: 30px;
+	width: 160px;
+	height: 80px;
+}
+
+        #text001 {
+            text-align: center;
+        }
+
+        #text002 {
+            text-align: left;
+        }
+
+        #green001 {
+            color: green;
+        }
+
+        #red001 {
+            color: red;
+        }
+        body{
+	font-family: 'Century Gothic';
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	background: url(imagenes/español.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+    </style>
+
+    <li class="first-item">
+        <div div align = "center"  class="boton_1">
+        <a href="index.html" >
+         <span class="text-item"><button>Regresar</button></span> 
+        <span class="down-item"></span>
+
+    </a>
+ </li>
+    <div align = "center" id="frame001">
+        <div align = "center" id="text001">
+            <h2>PREGUNTAS</h2>
+            Pregunta: <text id="number001">0</text><br />
+            Respuesta: <text id="score001">0</text>
+        <hr />
+                <div align = "center" id="message001">Has click en el Boton de Empezar</div><br />
+            </div>
+        <div align = "center" id="text002">
+            <div id="question001"></div>
+            <div id="option001"></div>
+            <div id="option002"></div>
+            <div id="option003"></div>
+            <div id="option004"></div>
+            <div id="answer001"></div>
+            <div id="text001">
+                <div align = "center" id="disappear001"><button class="buttons001" onclick="begin001()">COMENZAR</button></div>
+            </div>
+            <div align = "center" id="next001"></div>
+        </div>
+        </div>
+    
+    <script>
+        var q = ["1.- Es un fragmento de texto organizado por varias oraciones. Lo distinguimos porque empieza con letra mayúscula y cierra con punto y aparte, entre uno y otro hay un espacio en blanco ?<br /><br />",
+ "2.- Tipo de texto en el que existe una introducción, desarrollo de un tema y cierre ?<br /><br />", 
+ "3.- Estas palabras engloban todas las acciones que realizamos o suceden ?<br /><br />",
+  "4.- Son las terminaciones de los verbos conjugados en copretérito ?<br /><br />",
+   "5.- Son aquellas palabras que nos sirven para enlazar dos palabras u oraciones ?<br /><br />",
+    "6.- Aparato óptico que permite observar organismos de tamaño muy pequeño, cuyos detalles son imposibles de observar a simple vista ?<br /><br />", 
+    "7.- Son los restos de los organismos que existieron tiempo atrás en la tierra ?<br /><br />", 
+    "8.- Son las terminaciones de los verbos antes de ser conjugados en cualquier tiempo ?<br /><br />",
+     "9.- Es el nombre que se le da a los continentes unidos en uno solo ?<br /><br />",
+      "10.-Ciencia que se encarga del estudio de los fósiles ?<br /><br />"];
+        var a1 = ["<button class=buttons002 onclick=q1c()>párrafo</button>",
+                  "<button class=buttons002 onclick=q2c()>texto expositivo</button>",
+                  "<button class=buttons002 onclick=q3c()>verbos</button>",
+                  "<button class=buttons002 onclick=q4i()>pronombre</button>",
+                  "<button class=buttons002 onclick=q5i()>biografía</button>",
+                  "<button class=buttons002 onclick=q6i()>adjetivos</button>",
+                  "<button class=buttons002 onclick=q7i()>pospréterito</button>",
+                  "<button class=buttons002 onclick=q8i()>cohete</button>",
+                  "<button class=buttons002 onclick=q9i()>bandera</button>",
+                  "<button class=buttons002 onclick=q10i()>primera persona</button>"];
+
+        var a2 = ["<button class=buttons002 onclick=q1i()>cuento</button>",
+                  "<button class=buttons002 onclick=q2i()>mito</button>",
+                  "<button class=buttons002 onclick=q3i()>hiato</button>",
+                  "<button class=buttons002 onclick=q4c()>ía , aba </button>",
+                  "<button class=buttons002 onclick=q5c()>nexos o conectores</button>",
+                  "<button class=buttons002 onclick=q6c()>microscopios</button>",
+                  "<button class=buttons002 onclick=q7i()>fábula</button>",
+                  "<button class=buttons002 onclick=q8i()>trabalengua</button>",
+                  "<button class=buttons002 onclick=q9i()>instructivo</button>",
+                  "<button class=buttons002 onclick=q10i()>noticia</button>"];
+
+        var a3 = ["<button class=buttons002 onclick=q1i()>oracion</button>",
+                  "<button class=buttons002 onclick=q2i()>coma</button>",
+                  "<button class=buttons002 onclick=q3i()>las mayusculas</button>",
+                  "<button class=buttons002 onclick=q4i()>el uso de minusculas</button>",
+                  "<button class=buttons002 onclick=q5i()>situaiones</button>",
+                  "<button class=buttons002 onclick=q6i()>pretérito</button>",
+                  "<button class=buttons002 onclick=q7c()>fósiles</button>",
+                  "<button class=buttons002 onclick=q8c()>ar, er, ir</button>",
+                  "<button class=buttons002 onclick=q9i()>lexico</button>",
+                  "<button class=buttons002 onclick=q10i()>entrevista</button>"];
+
+        var a4 = ["<button class=buttons002 onclick=q1i()>leyenda</button>",
+                  "<button class=buttons002 onclick=q2i()>diptongo</button>",
+                  "<button class=buttons002 onclick=q3i()>esdrijulas</button>",
+                  "<button class=buttons002 onclick=q4i()>el punto final</button>",
+                  "<button class=buttons002 onclick=q5i()>sinonimos</button>",
+                  "<button class=buttons002 onclick=q6i()>copretérito</button>",
+                  "<button class=buttons002 onclick=q7i()>sinonimo</button>",
+                  "<button class=buttons002 onclick=q8i()>antonimo</button>",
+                  "<button class=buttons002 onclick=q9c()>pangea</button>",
+                  "<button class=buttons002 onclick=q10c()>paleontología</button>"];
+
+        var c = ["Correct", "Correct", "Correct", "Correct", "Correct", "Correct", "Correct", "Correct", "Correct", "Correct"];
+        var i = ["Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect"];
+
+        var n = 0;
+        n++;
+        var s = 0;
+        s++;
+
+        function begin001() {
+            disappear001.innerHTML = "";
+            message001.innerHTML = "";
+            question001.innerHTML = q[0];
+            option001.innerHTML = a1[0];
+            option002.innerHTML = a2[0];
+            option003.innerHTML = a3[0];
+            option004.innerHTML = a4[0];
+            number001.innerHTML = n++;
+        }
+
+        function q1c() {
+            answer001.innerHTML = "<div id=green001>" + c[0] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new002()>Next</button>";
+            score001.innerHTML = s++;
+        }
+
+        function q1i() {
+            answer001.innerHTML = "<div id=red001>" + i[0] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new002()>Next</button>";
+        }
+
+        function new002() {
+            question001.innerHTML = q[1];
+            option001.innerHTML = a1[1];
+            option002.innerHTML = a2[1];
+            option003.innerHTML = a3[1];
+            option004.innerHTML = a4[1];
+            next001.innerHTML = "";
+            answer001.innerHTML = "";
+            number001.innerHTML = n++;
+        }
+
+        function q2c() {
+            answer001.innerHTML = "<div id=green001>" + c[1] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new003()>Next</button>";
+            score001.innerHTML = s++;
+        }
+
+        function q2i() {
+            answer001.innerHTML = "<div id=red001>" + i[1] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new003()>Next</button>";
+        }
+
+        function new003() {
+            question001.innerHTML = q[2];
+            option001.innerHTML = a1[2];
+            option002.innerHTML = a2[2];
+            option003.innerHTML = a3[2];
+            option004.innerHTML = a4[2];
+            next001.innerHTML = "";
+            answer001.innerHTML = "";
+            number001.innerHTML = n++;
+        }
+
+        function q3c() {
+            answer001.innerHTML = "<div id=green001>" + c[2] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new004()>Next</button>";
+            score001.innerHTML = s++;
+        }
+
+        function q3i() {
+            answer001.innerHTML = "<div id=red001>" + i[2] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new004()>Next</button>";
+        }
+
+        function new004() {
+            question001.innerHTML = q[3];
+            option001.innerHTML = a1[3];
+            option002.innerHTML = a2[3];
+            option003.innerHTML = a3[3];
+            option004.innerHTML = a4[3];
+            next001.innerHTML = "";
+            answer001.innerHTML = "";
+            number001.innerHTML = n++;
+        }
+
+        function q4c() {
+            answer001.innerHTML = "<div id=green001>" + c[3] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new005()>Next</button>";
+            score001.innerHTML = s++;
+        }
+
+        function q4i() {
+            answer001.innerHTML = "<div id=red001>" + i[3] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new005()>Next</button>";
+        }
+
+        function new005() {
+            question001.innerHTML = q[4];
+            option001.innerHTML = a1[4];
+            option002.innerHTML = a2[4];
+            option003.innerHTML = a3[4];
+            option004.innerHTML = a4[4];
+            next001.innerHTML = "";
+            answer001.innerHTML = "";
+            number001.innerHTML = n++;
+        }
+
+        function q5c() {
+            answer001.innerHTML = "<div id=green001>" + c[4] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new006()>Next</button>";
+            score001.innerHTML = s++;
+        }
+
+        function q5i() {
+            answer001.innerHTML = "<div id=red001>" + i[4] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new006()>Next</button>";
+        }
+
+        function new006() {
+            question001.innerHTML = q[5];
+            option001.innerHTML = a1[5];
+            option002.innerHTML = a2[5];
+            option003.innerHTML = a3[5];
+            option004.innerHTML = a4[5];
+            next001.innerHTML = "";
+            answer001.innerHTML = "";
+            number001.innerHTML = n++;
+        }
+
+        function q6c() {
+            answer001.innerHTML = "<div id=green001>" + c[5] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new007()>Next</button>";
+            score001.innerHTML = s++;
+        }
+
+        function q6i() {
+            answer001.innerHTML = "<div id=red001>" + i[5] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new007()>Next</button>";
+        }
+
+        function new007() {
+            question001.innerHTML = q[6];
+            option001.innerHTML = a1[6];
+            option002.innerHTML = a2[6];
+            option003.innerHTML = a3[6];
+            option004.innerHTML = a4[6];
+            next001.innerHTML = "";
+            answer001.innerHTML = "";
+            number001.innerHTML = n++;
+        }
+
+        function q7c() {
+            answer001.innerHTML = "<div id=green001>" + c[6] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new008()>Next</button>";
+            score001.innerHTML = s++;
+        }
+
+        function q7i() {
+            answer001.innerHTML = "<div id=red001>" + i[6] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new008()>Next</button>";
+        }
+
+        function new008() {
+            question001.innerHTML = q[7];
+            option001.innerHTML = a1[7];
+            option002.innerHTML = a2[7];
+            option003.innerHTML = a3[7];
+            option004.innerHTML = a4[7];
+            next001.innerHTML = "";
+            answer001.innerHTML = "";
+            number001.innerHTML = n++;
+        }
+
+        function q8c() {
+            answer001.innerHTML = "<div id=green001>" + c[7] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new009()>Next</button>";
+            score001.innerHTML = s++;
+        }
+
+        function q8i() {
+            answer001.innerHTML = "<div id=red001>" + i[7] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new009()>Next</button>";
+        }
+
+        function new009() {
+            question001.innerHTML = q[8];
+            option001.innerHTML = a1[8];
+            option002.innerHTML = a2[8];
+            option003.innerHTML = a3[8];
+            option004.innerHTML = a4[8];
+            next001.innerHTML = "";
+            answer001.innerHTML = "";
+            number001.innerHTML = n++;
+        }
+
+        function q9c() {
+            answer001.innerHTML = "<div id=green001>" + c[8] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new010()>Next</button>";
+            score001.innerHTML = s++;
+        }
+
+        function q9i() {
+            answer001.innerHTML = "<div id=red001>" + i[8] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=new010()>Next</button>";
+        }
+
+        function new010() {
+            question001.innerHTML = q[9];
+            option001.innerHTML = a1[9];
+            option002.innerHTML = a2[9];
+            option003.innerHTML = a3[9];
+            option004.innerHTML = a4[9];
+            next001.innerHTML = "";
+            answer001.innerHTML = "";
+            number001.innerHTML = n++;
+        }
+
+        function q10c() {
+            answer001.innerHTML = "<div id=green001>" + c[9] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=end001()>End of Quiz</button>";
+            score001.innerHTML = s++;
+        }
+
+        function q10i() {
+            answer001.innerHTML = "<div id=red001>" + i[9] + "</div>";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<button class=buttons001 onclick=end001()>End of Quiz</button>";
+        }
+
+        function end001() {
+            message001.innerHTML = "End of Quiz.";
+            question001.innerHTML = "";
+            option001.innerHTML = "";
+            option002.innerHTML = "";
+            option003.innerHTML = "";
+            option004.innerHTML = "";
+            next001.innerHTML = "<div id=text001>" + "<button class=buttons001 onclick=repeat001()>Repeat</button>" + "</div>";
+            answer001.innerHTML = "";
+        }
+
+        function repeat001() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>
