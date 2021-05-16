@@ -7,7 +7,7 @@ const resultadoTest = document.getElementById("resultado");
 const preguntas = [
   {
   
-    pregunta: "1).Belén tiene 50 cromos y su amiga Gloria tiene 30.¿Cuántos cromos tienen entre las dos?",
+    pregunta: "1.Belén tiene 50 cromos y su amiga Gloria tiene 30.¿Cuántos cromos tienen entre las dos?",
     respuestas: {
       a: "0",
       b: "70",
@@ -16,7 +16,7 @@ const preguntas = [
     respuestaCorrecta: "c",
   },
   {
-    pregunta: "2).Entre dos amigos tienen 700 canicas. si uno tiene 200, ¿Cuantas canicas tiene el otro?",
+    pregunta: "2.Entre dos amigos tienen 700 canicas. si uni tiene 200, ¿Cuantas canicas tiene el otro?",
     respuestas: {
       a: "400",
       b: "500",
@@ -25,7 +25,7 @@ const preguntas = [
     respuestaCorrecta: "b",
   },
   {
-    pregunta: "3). Pedro tiene 20 rotuladores, juan tiene 10 y Eva tiene 30.¿Cuántos rotuladores tienen entre los tres?",
+    pregunta: "3. Pecro tiene 20 rotuladores, juan tiene 10 y Eva tiene 30.¿Cuántos rotuladores tienen entre los tres?",
     respuestas: {
       a: "40",
       b: "20",
@@ -35,7 +35,7 @@ const preguntas = [
     respuestaCorrecta: "d",
   },
   {
-    pregunta: "4).En un corral hay 34 gallinas y otro 11 menos.¿Cuantas gallinas hay entre los dos corrales?",
+    pregunta: "4.En un corral hay 34 gallinas y otro 11 menos.¿Cuantas gallinas hay entre los dos corrales?",
     respuestas: {
       a: "57",
       b: "67",
@@ -44,7 +44,7 @@ const preguntas = [
     respuestaCorrecta: "a",
   },
   {
-    pregunta: "5).¿En un árbol hay 28 ardillas y otro diez menos.¿Cuántas ardillas hay en el segundo árbol?",
+    pregunta: "5. ¿En un árbol hay 28 ardillas y otro diez menos.¿Cuántas ardillas hay en el segundo árbol?",
     respuestas: {
       a: "18",
       b: "8",
@@ -53,7 +53,7 @@ const preguntas = [
     respuestaCorrecta: "a",
   },
   {
-    pregunta: "6).Marta tiene 85 céntimos y compra una bolsa de pipas de 35 céntimos.¿Cuánto dinero le queda  ?",
+    pregunta: "6.Marta tiene 85 céntimos y compra una bolsa de pipas de 35 céntimos.¿Cuánto dinero le queda  ?",
     respuestas: {
       a: "71",
       b: "60",
@@ -62,7 +62,7 @@ const preguntas = [
     respuestaCorrecta: "c",
   },
   {
-    pregunta: "7).25 Amigos compraron 21 rifas cada uno.¿Cuantas rifas hay en total?",
+    pregunta: "7.25 amigos compraron 21 rifas cada uno.¿Cuantas rifas hay en total?",
     respuestas: {
       a: "635",
       b: "525",
@@ -71,7 +71,7 @@ const preguntas = [
     respuestaCorrecta: "b",
   },
   {
-    pregunta: "8).¿En un almacén hay 744 vajas y en cada una hay 25 bolsos ¿Cuántos bolsos hay en total?",
+    pregunta: "8. ¿En un almacén hay 744 vajas y en cada una hay 25 bolsos ¿Cuántos bolsos hay en total?",
     respuestas: {
       a: "18,800",
       b: "18,600",
@@ -80,7 +80,7 @@ const preguntas = [
     respuestaCorrecta: "b",
   },
   {
-    pregunta: "9).Una caja tiene  44 pelotas. Si hay 4 niños ¿Cúantas pelotas le corresponderá cada uno ?",
+    pregunta: "9.Una caja tiene  44 pelotas. Si hay 4 niños ¿Cúantas pelotas Le corresponderá cada uno ?",
     respuestas: {
       a: "11",
       b: "12",
@@ -89,7 +89,7 @@ const preguntas = [
     respuestaCorrecta: "a",
   },
   {
-    pregunta: "10). En mi cuaderno tengo 62 problemas. Si cada día hago 5 , ¿En cúantos dias acabaré cuaderno?",
+    pregunta: "10. En mi cuaderno tengo 62 problemas. Si cada dia hago 5 , ¿En cúantos dias acabaré cuaderno?",
     respuestas: {
       a: "12 Días",
       b: "13 Días",

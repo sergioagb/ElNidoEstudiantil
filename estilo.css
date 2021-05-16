@@ -8,11 +8,88 @@
 
 body{
 	font-family: 'Century Gothic';
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	background: url(img/pizarron.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+/*sobre la cuenta de usuario*/
+.contenedor{
+	width: 100%;
+	padding: 15px;
+
+}
+.Usuario{
+	background: #fff;
+	margin-top: 150px;
+	padding: 3px;
 }
 
+h1{
+	text-align: center;
+	color: #1a2537;
+	font-size: 40px;
+}
+
+input[type="text"],
+input[type="password"]{
+	font-size: 20px;
+	width: 82%;
+	padding: 10px;
+	border: none;
+}
+.input-contenedor{
+margin-bottom: 15px;
+border: 1px solid #aaa;
+}
+.icon{
+	min-width: 50px;
+	text-align: center;
+    color: #999;
+
+}
+.button{
+	border:none;
+	width: 100%;
+	color: white;
+	font-size: 20px;
+	background: #1a2537;
+	padding: 15px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.button:hover{
+	background: cadetblue;
+
+}
+
+p{
+	text-align: center;
+}
+.link{
+	text-decoration: none;
+	color: #1a2537;
+	font-weight: 600;
+}
+
+.link:hover{
+	color: rgb(5, 72, 75);
+
+}
+@media(min-width:768px){
+	.Usuario{
+		margin: auto;
+		width: 500px;
+		margin-top: 150px;
+		border-radius: 2%;
+	}
+}
+/*-------------------------------------------*/
 a{
 	text-decoration: none;
 }
+
 
 ul{
 	list-style: none;
@@ -44,6 +121,8 @@ img{
 
 .navegacion{
 	width: 100%;
+	background: #c77904;
+
 	display: flex;
 	justify-content: center;
 }
@@ -126,7 +205,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.51);
 	top: 0%;
 	width: 100%;
 	height: 100%;
-	
+	background: #0097fb;
 
 	-webkit-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
    -moz-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
@@ -175,12 +254,19 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.51);
 .fondodos img{
     margin: auto;
     display: black;
-    width: 1100px;
+    width: 1350px;
     height: 300px;
     /*position: absolute;*/
 }
 /*Diseño de los botones en menu*/
-
+.boton_1 button{
+	background: #e408a2;
+	color: white;
+	border-radius: 20px;
+	font-size: 30px;
+	width: 160px;
+	height: 80px;
+}
 .boton_2 button{
 	background: #5e4df3;
 	color: white;

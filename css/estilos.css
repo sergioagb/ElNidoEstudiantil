@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.tercero{
+    border-radius: 30px;
+    transition: transform 1s;
+}
+.tercero:hover{
+transform: scale(1.2);
+}
+
+.sexto{
+    border-radius: 30px;
+    transition: transform 1s;
+}
+.sexto:hover{
+transform: scale(1.2);
+}
+
+header{
+    width: 100%;
+    height: 58px;
+    background: rgb(10, 172, 158);
+    color:white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.contenedor{
+    width: 98%;
+    margin: auto;
+}
+
+h1{
+    float: center;
+}
+
+header .contenedor{
+    display: table;
+}
+
+section{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#bienvenidos{
+    text-align: center;
+}
+
+
+
+
+@media(min-width:1024px){
+    .contenedor{
+        width: 80%;
+    }
+}
