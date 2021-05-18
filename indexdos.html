@@ -1,8 +1,14 @@
 <!doctype html>
 <html>
     <head>
+        <title>Ohorcado Con Preguntas</title>
         <meta charset="utf-8">
-        
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="css/banner.css">
+        <link rel="stylesheet" href="css/blog.css">
+        <link rel="stylesheet" href="css/info.css">
+        <link rel="icon" href="img/favicon.png">
         <h3>Juguemos AL Ohorcado Con Preguntas</h3>
 		<li class="first-item">
             <div  class="boton_1">
@@ -54,7 +60,20 @@
             }
         </style>
         </head>
-        
+        <header>
+            <div class="contenedor">
+                <img src="img/nido2.png" style="width: 6%; height: 6%;">
+                <input type="checkbox" id="menu-bar">
+                <label class="icon-menu" for="menu-bar"></label>
+                <nav class="menu">
+                    <a href="index.html">Inicio</a>
+                    <a href="Materias.html">Materias</a>
+                    <a href="Puntaje.html">Puntaje</a>
+                    <a href="Ayuda.html">Ayuda</a>
+                 
+                </nav>
+            </div>
+        </header>
     <body>
         <canvas id="pantalla" width="960px" height="450px"> <!-- etiqueta del canvas con sus medidas en la pantalla -->
             Tu navegador no soporta Canvas.
@@ -180,13 +199,13 @@
                         pista = "Es fiesta, nacimiento del Niño Jesús y dan regalos.";
                         break;
                     case 'PINO':
-                        pista = "árbol de forma similar a una pirámide. ";
+                        pista = "Árbol de forma similar a una pirámide. ";
                         break;
                     case 'FLOR':
-                        pista = "Su belleza o fraganciaque crece en el cesped.";
+                        pista = "Su belleza o fragancia que crece en el cesped.";
                         break;
                     case 'PATINES':
-                        pista = "Dirve para ir sobre el hielo, sobre un pavimento liso.";
+                        pista = "Sirve para ir sobre el hielo, sobre un pavimento liso.";
                         break;
                     case 'BICICLETA':
                         pista = "Tiene dos ruedas, con pedales que transmite el movimiento.";

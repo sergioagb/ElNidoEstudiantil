@@ -30,9 +30,9 @@
     <style> 
   
         #frame001 {
-            background-color: rgb(209, 69, 69);
-            border: 4px solid black;
-            width: 800px;
+            background-color: rgb(238, 125, 253);
+            border: 4px solid rgb(233, 226, 226);
+            width: 600px;
             height: 400px;
             border-radius: 10px;
             padding: 90px;
@@ -42,7 +42,7 @@
         }
 
         .buttons001 {
-            background: #126485;
+            background: #356172;
 	color: white;
 	border-radius: 20px;
 	font-size: 30px;
@@ -53,8 +53,8 @@
         }
 
         .buttons002 {
-            background-color: rgb(236, 240, 12);
-            color: black;
+            background-color: rgb(132, 8, 163);
+            color: rgb(248, 248, 248);
             padding: 3px;
             margin: 3px;
             border-radius: 10px;
@@ -63,8 +63,8 @@
             margin-right: auto;
         }
         .boton_1 button{
-	background: #19635d;
-	color: white;
+	background: #c8a4dd;
+	color: rgb(255, 255, 255);
 	border-radius: 20px;
 	font-size: 30px;
 	width: 160px;
@@ -80,19 +80,19 @@
         }
 
         #green001 {
-            color: rgb(10, 161, 10);
+            color: green;
             background-color: azure;
         }
 
         #red001 {
-            color: rgb(197, 6, 6);
+            color: red;
             background-color: azure;
         }
         body{
 	font-family: 'Century Gothic';
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 0;
-	background: url(imagenes/español.jpg);
+	background: url(imagenes/matematicas.png);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -115,7 +115,7 @@
             <div id="option004"></div>
             <div id="answer001"></div>
             <div id="text001">
-               
+                   
                 <div align = "center" id="disappear001"><button class="buttons001" onclick="begin001()">COMENZAR</button></div>
             </div>
            
@@ -125,59 +125,59 @@
         </div>
     
     <script>
-        var q = ["1.- Es un fragmento de texto organizado por varias oraciones. Lo distinguimos porque empieza con letra mayúscula y cierra con punto y aparte, entre uno y otro hay un espacio en blanco ?<br /><br />",
- "2.- Tipo de texto en el que existe una introducción, desarrollo de un tema y cierre ?<br /><br />", 
- "3.- Estas palabras engloban todas las acciones que realizamos o suceden ?<br /><br />",
-  "4.- Son las terminaciones de los verbos conjugados en copretérito ?<br /><br />",
-   "5.- Son aquellas palabras que nos sirven para enlazar dos palabras u oraciones ?<br /><br />",
-    "6.- Aparato óptico que permite observar organismos de tamaño muy pequeño, cuyos detalles son imposibles de observar a simple vista ?<br /><br />", 
-    "7.- Son los restos de los organismos que existieron tiempo atrás en la tierra ?<br /><br />", 
-    "8.- Son las terminaciones de los verbos antes de ser conjugados en cualquier tiempo ?<br /><br />",
-     "9.- Es el nombre que se le da a los continentes unidos en uno solo ?<br /><br />",
-      "10.-Ciencia que se encarga del estudio de los fósiles ?<br /><br />"];
-        var a1 = ["<button class=buttons002 onclick=q1c()>párrafo</button>",
-                  "<button class=buttons002 onclick=q2c()>texto expositivo</button>",
-                  "<button class=buttons002 onclick=q3c()>verbos</button>",
-                  "<button class=buttons002 onclick=q4i()>pronombre</button>",
-                  "<button class=buttons002 onclick=q5i()>biografía</button>",
-                  "<button class=buttons002 onclick=q6i()>adjetivos</button>",
-                  "<button class=buttons002 onclick=q7i()>pospréterito</button>",
-                  "<button class=buttons002 onclick=q8i()>cohete</button>",
-                  "<button class=buttons002 onclick=q9i()>bandera</button>",
-                  "<button class=buttons002 onclick=q10i()>primera persona</button>"];
+        var q = ["1.Belén tiene 50 cromos y su amiga Gloria tiene 30.¿Cuántos cromos tienen entre las dos?<br /><br />",
+ "2. Entre dos amigos tienen 700 canicas. si uni tiene 200, ¿Cuantas canicas tiene el otro?<br /><br />", 
+ "3. Pecro tiene 20 rotuladores, juan tiene 10 y Eva tiene 30.¿Cuántos rotuladores tienen entre los tres?<br /><br />",
+  "4. En un corral hay 34 gallinas y otro 11 menos.¿Cuantas gallinas hay entre los dos corrales?<br /><br />",
+   "5. En un árbol hay 28 ardillas y otro diez menos.¿Cuántas ardillas hay en el segundo árbol?<br /><br />",
+    "6. Marta tiene 85 céntimos y compra una bolsa de pipas de 35 céntimos.¿Cuánto dinero le queda ?<br /><br />", 
+    "7. 25 amigos compraron 21 rifas cada uno.¿Cuantas rifas hay en total?<br /><br />", 
+    "8. En un almacén hay 744 vajas y en cada una hay 25 bolsos ¿Cuántos bolsos hay en total?<br /><br />",
+     "9. Una caja tiene 44 pelotas. Si hay 4 niños ¿Cúantas pelotas Le corresponderá cada uno ?<br /><br />",
+      "10. En mi cuaderno tengo 62 problemas. Si cada dia hago 5 , ¿En cúantos dias acabaré cuaderno?<br /><br />"];
+        var a1 = ["<button class=buttons002 onclick=q1c()>80 COROMOS</button>",
+                  "<button class=buttons002 onclick=q2c()>500 CANICAS</button>",
+                  "<button class=buttons002 onclick=q3c()>60 ROTULADORES</button>",
+                  "<button class=buttons002 onclick=q4i()>67 GALLINAS</button>",
+                  "<button class=buttons002 onclick=q5i()>08 ARDILLA</button>",
+                  "<button class=buttons002 onclick=q6i()>60 PESOS</button>",
+                  "<button class=buttons002 onclick=q7i()>635 RIFAS</button>",
+                  "<button class=buttons002 onclick=q8i()>18,500 BOLSOS</button>",
+                  "<button class=buttons002 onclick=q9i()>12 PELOTAS</button>",
+                  "<button class=buttons002 onclick=q10i()>15 DÍAS</button>"];
 
-        var a2 = ["<button class=buttons002 onclick=q1i()>Cuento</button>",
-                  "<button class=buttons002 onclick=q2i()>Mito</button>",
-                  "<button class=buttons002 onclick=q3i()>Hiato</button>",
-                  "<button class=buttons002 onclick=q4c()>ía , aba </button>",
-                  "<button class=buttons002 onclick=q5c()>Nexos o Conectores</button>",
-                  "<button class=buttons002 onclick=q6c()>Microscopios</button>",
-                  "<button class=buttons002 onclick=q7i()>Fábula</button>",
-                  "<button class=buttons002 onclick=q8i()>Trabalengua</button>",
-                  "<button class=buttons002 onclick=q9i()>Instructivo</button>",
-                  "<button class=buttons002 onclick=q10i()>Noticia</button>"];
+        var a2 = ["<button class=buttons002 onclick=q1i()>70 COROMOS</button>",
+                  "<button class=buttons002 onclick=q2i()>400 CANICAS</button>",
+                  "<button class=buttons002 onclick=q3i()>50 ROTULADORES</button>",
+                  "<button class=buttons002 onclick=q4c()>57 GALLINAS </button>",
+                  "<button class=buttons002 onclick=q5c()>18 ARDILLA</button>",
+                  "<button class=buttons002 onclick=q6c()>50 PESOS</button>",
+                  "<button class=buttons002 onclick=q7i()>545 RIFAS</button>",
+                  "<button class=buttons002 onclick=q8i()>18,800 BOLSOS</button>",
+                  "<button class=buttons002 onclick=q9i()>10 PELOTAS</button>",
+                  "<button class=buttons002 onclick=q10i()>12 DÍAS</button>"];
 
-        var a3 = ["<button class=buttons002 onclick=q1i()>Oración</button>",
-                  "<button class=buttons002 onclick=q2i()>Coma</button>",
-                  "<button class=buttons002 onclick=q3i()>Las mayusculas</button>",
-                  "<button class=buttons002 onclick=q4i()>El uso de minusculas</button>",
-                  "<button class=buttons002 onclick=q5i()>Situaiones</button>",
-                  "<button class=buttons002 onclick=q6i()>Pretérito</button>",
-                  "<button class=buttons002 onclick=q7c()>Fósiles</button>",
-                  "<button class=buttons002 onclick=q8c()>ar, er, ir</button>",
-                  "<button class=buttons002 onclick=q9i()>Lexico</button>",
-                  "<button class=buttons002 onclick=q10i()>Entrevista</button>"];
+        var a3 = ["<button class=buttons002 onclick=q1i()>0 COROMOS</button>",
+                  "<button class=buttons002 onclick=q2i()>600 CANICAS</button>",
+                  "<button class=buttons002 onclick=q3i()>90 ROTULADORES</button>",
+                  "<button class=buttons002 onclick=q4i()>50 GALLINAS </button>",
+                  "<button class=buttons002 onclick=q5i()>28 ARDILLAS</button>",
+                  "<button class=buttons002 onclick=q6i()>71 PESOS</button>",
+                  "<button class=buttons002 onclick=q7c()>525 RIFAS</button>",
+                  "<button class=buttons002 onclick=q8c()>18,600 BOLSOS</button>",
+                  "<button class=buttons002 onclick=q9i()>16 PELOTAS</button>",
+                  "<button class=buttons002 onclick=q10i()>16 DÍAS</button>"];
 
-        var a4 = ["<button class=buttons002 onclick=q1i()>Leyenda</button>",
-                  "<button class=buttons002 onclick=q2i()>Diptongo</button>",
-                  "<button class=buttons002 onclick=q3i()>Esdrijulas</button>",
-                  "<button class=buttons002 onclick=q4i()>El punto final</button>",
-                  "<button class=buttons002 onclick=q5i()>Sinonimos</button>",
-                  "<button class=buttons002 onclick=q6i()>Copretérito</button>",
-                  "<button class=buttons002 onclick=q7i()>Sinonimo</button>",
-                  "<button class=buttons002 onclick=q8i()>Antonimo</button>",
-                  "<button class=buttons002 onclick=q9c()>Pangea</button>",
-                  "<button class=buttons002 onclick=q10c()>Paleontología</button>"];
+        var a4 = ["<button class=buttons002 onclick=q1i()>90 COROMOS</button>",
+                  "<button class=buttons002 onclick=q2i()>300 CANICAS</button>",
+                  "<button class=buttons002 onclick=q3i()>80 ROTULADORES</button>",
+                  "<button class=buttons002 onclick=q4i()>97 GALLINA</button>",
+                  "<button class=buttons002 onclick=q5i()>17 ARDILLAS</button>",
+                  "<button class=buttons002 onclick=q6i()>26 PESOS</button>",
+                  "<button class=buttons002 onclick=q7i()>458 RIFAS</button>",
+                  "<button class=buttons002 onclick=q8i()>18.600 BOLSOS</button>",
+                  "<button class=buttons002 onclick=q9c()>11 PELOTAS</button>",
+                  "<button class=buttons002 onclick=q10c()>13 DÍAS</button>"];
 
         var c = ["Correct", "Correct", "Correct", "Correct", "Correct", "Correct", "Correct", "Correct", "Correct", "Correct"];
         var i = ["Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect"];
@@ -218,6 +218,7 @@
         }
 
         function new002() {
+            
             question001.innerHTML = q[1];
             option001.innerHTML = a1[1];
             option002.innerHTML = a2[1];
