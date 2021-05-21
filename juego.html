@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <nav class="menu">
+		<a href="index.html">Inicio</a>
+		<a href="materiasdos.html">Materias</a>
+		<a href="Puntaje.html">Puntaje</a>
+		<a href="Ayuda.html">Ayuda</a>
+
+	</nav>
+    <meta charset="UTF-8">
+    <title>cuestionario</title>
+    <link rel="stylesheet"
+    href="https://use.fontawesome.com/release/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/info.css">
+    <link rel="icon" href="img/favicon.png">
+
+</head>
+<body>
+       <h2 >Cuestenario de Matematicas sexto grado</h2>
+        <div class="contenedor">
+             
+                <p class="tiempo">Tiempo:<span class="time" >15 s</span> </p>
+       <div class="pregunta"></div>
+       
+        <button onclick="printHtml(currentQuestionIndex)" class="next">siguiente</button>   
+        <li>
+            <div  class="boton_1">
+                <a href="materiasdos.html">
+                   <span class="text-item"><button>Salida</button></span>
+                   <span class="down-item"></span>
+              </a>
+         </li>
+    </div>
+        <p class="resp"> respuestas correctas: <span class="rightCounter">0</span></p>
+        <p class="resp"> respuestas incorrectas: <span class="wrongCounter">0</span></p>
+     
+    </div>
+         <style>
+             *{
+                 text-decoration-color: aqua;
+                
+             }
+             .boton_1 button{
+	       background: #7e89e9;
+	       color: white;
+	       border-radius: 20px;
+	       font-size: 30px;
+	       width: 100px;
+	       height: 80px;
+                     }
+               body{
+            background: slategray;
+            padding: 0;
+            margin:auto;
+            text-align: center;
+            font-family: calibri;
+            font-size: 120%;
+            background: url(img/banner-bienvenidos.jpg);
+        }
+             h2{
+                 background:yellow;
+                 text-align: center;
+             }
+             p{
+               background: white;
+                 padding: 10px;
+                 padding-top: .1px;
+             }
+             .resp{
+                 background: lightblue;
+                 transform: translateX(-50%) translateY();
+             }
+             .contenedor{
+            width: 98vw;
+            height: 97vh;
+            display:inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid white;
+            
+        }
+             .right {
+              background: green;
+             }
+             .wrong{
+              background: red;
+             }
+            .btn{
+           background: solid blue;
+            width: 10%;
+            padding: 10px;
+            margin: 5px;
+        }
+        .btn:hover{
+            background: blue;
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+             .next{
+                 background: lightgreen;
+             }
+             .banner-img{
+                width: 90%;
+                padding-top: 40px;
+                
+             }
+             .final{
+                 transform: translateX(-390%) translateY(-350%);
+                 padding: 10px;
+                 background: lightpink;
+             }
+             .next{
+                 padding: 10px;
+                 width: 30%;
+             }
+             
+             @media(min-width:1024px){
+                 .banner-img{
+                     padding: 2%;
+                     padding-top: 5%;
+                     height: 25%;
+                     width: 80%;
+                 }
+                  .tiempo{
+                      width: 15%
+             }
+                 .resp{
+                 width: 25%    
+                 }
+                 .next{
+                    padding: 10px; 
+                     width: 15%;
+                 }
+                 .btn{
+                     padding: 20px;
+                     width: 10%;
+                 }
+                 .answer{
+                transform: translateX(80%);     
+                   width: 40%;
+                 }
+                 .respuest{
+                     width: 5%;
+                 }
+                 .final{
+                   transform: translateX(-590%) translateY(-350%);
+                   
+                 }
+               
+             }
+         </style>
+         
+    <script >
+        let  rightAswer;
+        let currentQuestionIndex = 0;
+        let rightAnswer = 0;
+        let wrongAnswer = 0;
+        let timeinterval;
+        let time = 1500;
+        
+ const cuestionary =[{"question":"Pregunta 1:¿Qué resultado obtienes al triplicar el número 5.143 y sumarle los 3/5 del número 68.950?",
+                         "respuesta":["56.799", "56.899","56.789"]
+                        },
+                        
+                       {"question":"Pregunta 2: Una jarra contiene 2 1/4 litro de agua. Con esa jarra se llenaron dos vasos de 1/4 litro cada uno y un vaso de 1/3 de litro. ¿Cuánta agua quedó en la jarra?",
+                       "respuesta":["1 y 5/12","1 y 1/2","1 y 7/12"]
+                       
+                       },
+                       {"question":"Pregunta 3: Eduardo cobra mensualmente 1.345€ y Juana gana 45€ diarios. ¿Cuál es la diferencia de los sueldos de Eduardo y Juana en un año?",
+                        "respuesta":["285 euros","295 euros","293 euros"]  
+                       },
+                         {"question":"Pregunta 4: Fernando compra 16 docenas de chaquetas deportivas a 17 euros cada chaqueta. Si vende ocho docenas y media a 23 euros cada chaqueta y el resto a 25 euros, ¿Cuánto dinero gana Fernando en total?",
+                        "respuesta":["1.332 euros","1.433 euros","1.344 euros"]  
+                       },
+                         {"question":"Pregunta 5:xcxc c xxx Antonio expidió 3 cheques por un total de 158.376 euros; si el primer cheque era por 49.521€ y el segundo por 26.193€ ¿Cuál fue el importe del tercer cheque?",
+                        "respuesta":["82.662","82.672","82.762"]  
+                       },
+                         {"question":"Pregunta 6: Andrea leyó 120 páginas que representan 3/4 partes de un libro, ¿cuántas páginas le falta leer?",
+                        "respuesta":["40","160","90"]  
+                       },
+                         {"question":"Pregunta 7: En una ferretería hay dos frascos con clavos del mismo tipo. En uno de ellos la etiqueta dice 7/8 kg y en el otro la etiqueta dice 9/10 kg. ¿Qué frasco contiene más clavos?",
+                        "respuesta":["9/10","7/8","Los dos frascos pesan lo mismo"]  
+                       },
+                         {"question":"Pregunta 8: Para una reunión Graciela encargó 6 docenas de sandwiches: la mitad son de tomate, un tercio de pollo y el resto de jamón y queso. ¿Cuántos sandwiches de jamón y queso había?",
+                        "respuesta":["12","60","10"]  
+                       },
+                         {"question":"Pregunta 9: El dueño de un bazar compró 18 docenas de copas a 20 céntimos cada copa. Si al transportarlas se le han roto 36 copas, ¿a cuánto deberá vender cada copa para no perder dinero?",
+                        "respuesta":["0,24 euros","0,20 euros","0,34 euros"]  
+                       },
+                         {"question":"Pregunta 10: Lucas, Anibal y Karina se repartieron una suma de dinero de la siguiente manera: Lucas recibió el doble de lo que recibió Anibal. Karina recibió la misma cantidad que Lucas y Anibal juntos. Karina recibió €117. ¿Qué cantidad de dinero repartieron?",
+                        "respuesta":["€ 234","€ 176","€ 351"]  
+                       }
+                       ];
+        
+   const printHtml = (i) => {
+       
+       currentQuestionIndex++;
+        const q = cuestionary[i];
+        let a = q.respuesta;
+         rightAswer= a[0];
+         a=a.sort((a,b) => Math.floor(Math.random()*3)-1);
+        
+       
+        const htmlAnswersArray = a.map( currentA => `<p class="answer"><button class="btn" onclick="evaluateAnswer('${currentA}',this)">R</button> <span>${currentA}</span></p>`);
+        
+        const htmlAnswers = htmlAnswersArray.join(' ');
+        
+        let htmQuestionCode = `<p class="q">${q.question}</p> <div>${htmlAnswers}</div>`;
+        document.querySelector('.pregunta').innerHTML = htmQuestionCode;
+       
+       time=15;
+       document.querySelector('.time').innerHTML= time;
+       clearInterval(timeinterval);
+       
+       timeinterval = setInterval( ()=>{
+           time--;
+           if(time == 0){
+               clearInterval(timeinterval);
+                alert("se acabo el tiempo");
+               printHtml(currentQuestionIndex);
+            
+           }else{
+             document.querySelector('.time').innerHTML=time;
+           }
+       },1000)
+    }
+   
+   const evaluateAnswer = (answer,obj)=>{
+       
+       document.querySelectorAll('.answer').forEach(a => a.classList.remove('right','wrong'));
+       
+       console.log('answer: '+answer+', rightAswer: '+rightAswer)
+       
+       const parentP = obj.parentNode;
+       
+       if(answer == rightAswer){
+           parentP.classList.add('right');
+           rightAnswer++;
+           document.querySelector('.rightCounter').innerHTML = rightAnswer;
+       }else{
+           parentP.classList.add('wrong');
+            wrongAnswer++;
+           document.querySelector('.wrongCounter').innerHTML = wrongAnswer;
+       }
+       
+       const nextQuestion= _ =>{
+           
+       }
+   }
+  
+    printHtml(0); 
+        
+    </script>
+</body>
+</html>
